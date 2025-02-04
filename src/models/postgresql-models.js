@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const { postgresDb } = require('./db');
+const { postgresDb } = require('../config/db');
 
 // PostgreSQL Models
 const UserPostgres = postgresDb.define('User', {

@@ -1,9 +1,12 @@
 {
   "name": "db-experiment",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "seed": "node src/scripts/seed.js",
+    "benchmark-runner": "node src/scripts/benchmark-runner.js"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +14,7 @@
   "description": "",
   "dependencies": {
     "@faker-js/faker": "^9.4.0",
+    "dotenv": "^16.4.7",
     "mysql2": "^3.12.0",
     "pg": "^8.13.1",
     "quickchart-js": "^3.1.3",

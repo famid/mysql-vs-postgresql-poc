@@ -3,13 +3,13 @@ const {
   UserPostgres,
   ProductPostgres,
   OrderPostgres,
-} = require('./postgresql-models');
+} = require('../models/postgresql-models');
 const {
     UserMySQL,
     ProductMySQL,
     OrderMySQL,
-  } = require('./mysql-models.js');
-const { postgresDb, mysqlDb } = require('./db');
+  } = require('../models/mysql-models.js');
+const { postgresDb, mysqlDb } = require('../config/db');
 
 // Helper function to chunk the data
 const chunkArray = (array, size) => 
@@ -19,7 +19,7 @@ const chunkArray = (array, size) =>
 
 const seedData = async () => {
     const users = Array.from({ length: 1000 }, () => ({
-      name: faker.person.fullName(), // Updated method
+      name: faker.person.fullName(),
       email: faker.internet.email(),
       age: faker.number.int({ min: 18, max: 65 }),
     }));
@@ -28,7 +28,7 @@ const seedData = async () => {
       name: faker.commerce.productName(),
       price: parseFloat(faker.commerce.price()),
       metadata: {
-        brand: faker.company.name(), // Updated method
+        brand: faker.company.name(),
         stock: faker.number.int({ min: 0, max: 1000 }),
         category: faker.commerce.department(),
       },
