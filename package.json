@@ -8,10 +8,10 @@
     "seed": "node src/scripts/seed.js",
     "benchmark-runner": "node src/scripts/benchmark-runner.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["PostgreSQL", "MySQL", "Benchmark", "Performance", "Database"],
+  "author": "Ahsanul Hoque Famid",
   "license": "ISC",
-  "description": "",
+  "description": "A performance comparison experiment between PostgreSQL and MySQL",
   "dependencies": {
     "@faker-js/faker": "^9.4.0",
     "dotenv": "^16.4.7",
